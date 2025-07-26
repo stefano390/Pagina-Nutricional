@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="img/paltaFavicon.png">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <title>NutriGM</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+      <a href="#"><img src="/img/home.png" alt="Inicio" class="home-icon" /></a>
+      <a href="index.html" class="logo-text">NutriGM</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>
+        <li><a href="registrar.html">Registrarse</a></li>
+        <li><a href="#Nutricionistas">Nutricionistas</a></li>
+        <li><a href="calculadora.html">Calcular IMC</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-img-container">
+        <img src="img/platoDeNutricion2.png" alt="Plato saludable" />
+        <!--<button class="cta-button"><a href="registrar.html"></a>Comenzá tu cambio</button>-->
+        <a href="registrar.html" class="cta-button">Comenzá tu cambio</a>
+
+      </div>
+    </section>
+
+<!--=======SECCION CONOCE A NUESTROS NUTRICIONISTAS=======-->
+<section class="nutricionistas" id="Nutricionistas">
+  <h2>Conocé a nuestros nutricionistas</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn prev-btn" aria-label="Anterior">&#8592;</button>
+    <div class="carousel">
+      <div class="card active">
+        <img src="img/nutricionista.jpg" alt="Nutricionista 1" />
+        <h3>Dr. Diego Pérez</h3>
+        <p>Especialista en alimentación deportiva y hábitos sostenibles.</p>
+      </div>
+      <div class="card">
+        <img src="img/nutricionista2.png" alt="Nutricionista 2" />
+        <h3>Lic. Pablo Vicencio</h3>
+        <p>Experto en nutrición clínica y educación alimentaria.</p>
+      </div>
+      <div class="card">
+        <img src="img/nutricionista3.png" alt="Nutricionista 3" />
+        <h3>Lic. Stefano Mejias</h3>
+        <p>Acompañamiento en cambios de hábitos saludables.</p>
+      </div>
+    </div>
+    <button class="carousel-btn next-btn" aria-label="Siguiente">&#8594;</button>
+  </div>
+</section>
+
+  </main>
+
+<!--========SECCION FOOTER========-->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Menú</h4>
+      <ul>
+        <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>
+          <li><a href="registrar.html">Registrarse</a></li>
+          <li><a href="calculadora.html">Calcular IMC</a></li>
+          <li><a href="index.html#Nutricionistas">Nutricionistas</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Seguinos</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Perito Moreno 123, Ciudad</p>
+      <p><i class="fas fa-clock"></i> Horarios de atención: Lun a Vie - 9:00 a 18:00</p>
+      <p><i class="fas fa-envelope"></i> contacto@nutrigm.com</p>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <p>“Tu salud comienza por tu plato.”</p>
+  </div>
+</footer>
+  
+<script src="js/carrusel.js"></script>
+
+</body>
+</html>
