@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="img/paltaFavicon.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <title>Panel del Paciente | NutriGM</title>
+</head>
+<body>
+
+  
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="#"><img src="img/home.png" alt="Inicio" class="home-icon" /></a>
+        <a href="index.html" class="logo-text">NutriGM</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section class="paciente-panel">
+      <div class="paciente-header">
+        <h2>Bienvenido, Juan Pérez</h2>
+        <!--<a href="sacarTurno.html" class="cta-button paciente-btn">Sacar nuevo turno</a>-->
+        <button class="cta-button paciente-btn" onclick="location.href='sacarTurno.html'">Sacar nuevo turno</button>
+      </div>
+
+      <!-- Datos del paciente -->
+      <div class="paciente-datos">
+        <h3>Tus datos</h3>
+        <ul>
+          <li><strong>Nombre:</strong> Juan Pérez</li>
+          <li><strong>Email:</strong> juanperez@gmail.com</li>
+          <li><strong>Edad:</strong> 28 años</li>
+        </ul>
+      </div>
+
+      <!-- Turnos pendientes -->
+      <div class="turnos-pendientes">
+        <h3>Turnos pendientes</h3>
+        <ul>
+          <li>📅 26 de Julio - 15:00hs con Lic. Stefano Mejias</li>
+          <li>📅 2 de Agosto - 10:30hs con Lic. Pablo Vicencio</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Menú</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="calculadora.html">Calcular IMC</a></li>
+          <li><a href="index.html#Nutricionistas">Nutricionistas</a></li>
+          <li><a href="#">Recetas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Seguinos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Perito Moreno 123, Ciudad</p>
+        <p><i class="fas fa-clock"></i> Lun a Vie - 9:00 a 18:00</p>
+        <p><i class="fas fa-envelope"></i> contacto@nutrigm.com</p>
+      </div>
+    </div>
+    <div class="footer-quote">
+      <p>“Tu salud comienza por tu plato.”</p>
+    </div>
+  </footer>
+
+</body>
+</html>

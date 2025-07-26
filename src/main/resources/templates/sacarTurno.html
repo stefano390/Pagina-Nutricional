@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sacar Turno</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="img/paltaFavicon.png">
+  <script src="https://kit.fontawesome.com/a2e0e6adcf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+      <a href="index.html"><img src="img/home.png" alt="Inicio" class="home-icon" /></a>
+      <a href="index.html" class="logo-text">NutriGM</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="registro-container">
+    <h2>Solicitá tu turno</h2>
+    <form id="turno-form">
+      
+      <!-- PROFESIONAL -->
+      <label for="profesional">Seleccioná un profesional:</label>
+      <select id="profesional" required>
+        <option value="">-- Elegí una opción --</option>
+        <option value="nutri1">Dr. Diego Perez</option>
+        <option value="nutri2">Lic. Pablo Vicencio</option>
+        <option value="nutri3">Lic. Stefano Mejias</option>
+      </select>
+
+      <!-- FECHA -->
+      <label for="fecha">Seleccioná una fecha:</label>
+      <input type="date" id="fecha" required />
+
+      <!-- HORARIO -->
+      <label for="horario">Seleccioná un horario:</label>
+      <select id="horario" required>
+        <option value="">-- Elegí un horario --</option>
+        <option value="9">09:00 hs</option>
+        <option value="11">11:00 hs</option>
+        <option value="15">15:00 hs</option>
+        <option value="17">17:00 hs</option>
+      </select>
+
+      <!-- BOTÓN -->
+      <button type="submit">Confirmar turno</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Menú</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+          <li><a href="calculadora.html">Calcular IMC</a></li>
+          <li><a href="index.html#Nutricionistas">Nutricionistas</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Seguinos</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Perito Moreno 123, Ciudad</p>
+      <p><i class="fas fa-clock"></i> Horarios de atención: Lun a Vie - 9:00 a 18:00</p>
+      <p><i class="fas fa-envelope"></i> contacto@nutrigm.com</p>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <p>“Tu salud comienza por tu plato.”</p>
+  </div>
+</footer>
+
+</body>
+</html>

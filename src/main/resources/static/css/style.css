@@ -1,0 +1,593 @@
+/* ======= RESET Y GENERALES ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfcf7;
+  color: #314528;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar a {
+  color: #314528;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado amarillo al hacer hover */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background-color: #f7d156;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar a:hover {
+  color: #1d2e1b; 
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.home-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-text {
+  position: relative;
+  font-size: 1.6rem !important; /*!important lo obliga a hacerlo*/
+  font-weight: 600;
+  color: #314528;
+}
+
+/* Este selector sobrescribe el general */
+.navbar .logo-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100% !important; /* <-- esto lo obliga a sobrescribir el width: 0% */
+  height: 3px;
+  background-color: #f7d156;
+  border-radius: 2px;
+  transition: none;
+}
+
+/* ======= HERO ======= */
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  color: #314528;
+}
+
+.hero-img-container {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-img-container img {
+  width: 100%;
+  height: 650px; /* altura controlada para que no sea larga */
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cta-button {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7d156;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  color: #314528;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+  background-color: #eac53d;
+}
+
+/* ======= SECCIÓN NUTRICIONISTA ======= */
+
+.nutricionistas {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.nutricionistas h2 {
+  font-size: 2rem;
+  color: #314528;
+  margin-bottom: 2rem;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.carousel-btn {
+  background-color: #f7d156;
+  border: none;
+  color: #314528;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background-color: #eac53d;
+}
+
+.carousel {
+  display: flex;
+  width: 700px; /* ancho fijo para las 3 cards */
+  justify-content: center;
+  gap: 1rem;
+  perspective: 1000px; /* para darle profundidad si querés */
+}
+
+.card {
+  flex: 0 0 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  opacity: 0.7;
+  transform-style: preserve-3d;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+/* Card activo: más grande y opaco 100% */
+.card.active {
+  flex: 0 0 280px;
+  opacity: 1;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.card.active img {
+  transform: scale(1.05);
+}
+
+/* Cards laterales pueden tener un efecto sutil de rotación */
+.card:not(.active) {
+  transform: scale(0.85);
+  cursor: default;
+}
+
+/*=========FORMULARIO REGISTRO==================*/
+/* CONTENEDOR DEL FORMULARIO */
+.registro-container {
+  max-width: 400px;
+  margin: 100px auto 60px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+
+.registro-container h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #314528; /* Verde oscuro del diseño */
+}
+
+/* CAMPOS DE ENTRADA */
+#registro-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+#registro-form input:focus {
+  border-color: #81A969; /* Verde intermedio */
+  outline: none;
+}
+/* CONTRASEÑA */
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+/* BOTÓN */
+#registro-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #81A969; /* Verde medio */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#registro-form button:hover {
+  background-color: #314528; /* Verde oscuro */
+}
+
+/* ENLACE AL LOGIN */
+.registro-login {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.registro-login a {
+  color: #81A969;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.registro-login a:hover {
+  text-decoration: underline;
+}
+
+/*======== FORMULARIO INICIAR SESION===========*/
+#login-form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+#login-form input:focus {
+  border-color: #81A969;
+  outline: none;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #81A969;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+  background-color: #314528;
+}
+/*=========PACIENTES0===============*/
+/*.paciente-panel {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.paciente-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #314528;
+}
+
+.paciente-datos,
+.turnos-pendientes {
+  background-color: #EFDDC9;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.paciente-datos ul,
+.turnos-pendientes ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.paciente-datos li,
+.turnos-pendientes li {
+  margin-bottom: 10px;
+}*/
+.paciente-panel {
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .paciente-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .paciente-header h2 {
+      font-size: 2rem;
+      color: #314528;
+    }
+
+    .paciente-datos,
+    .turnos-pendientes {
+      background-color: #EFDDC9;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .paciente-datos ul,
+    .turnos-pendientes ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .paciente-datos li,
+    .turnos-pendientes li {
+      margin-bottom: 10px;
+    }
+
+/* Botón de sacar turno en el panel del paciente */
+.paciente-btn {
+  position: static;
+  transform: none;
+  top: auto;
+  left: auto;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+}
+
+/*==========FORMULARIO SACAR TURNO============*/
+#turno-form select,
+#turno-form input[type="date"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+#turno-form select:focus,
+#turno-form input[type="date"]:focus {
+  border-color: #81A969;
+  outline: none;
+}
+
+#turno-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #81A969;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#turno-form button:hover {
+  background-color: #314528;
+}
+
+/*===========CALCULADORA==========*/
+.registro-container form input[type="number"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.registro-container form input[type="number"]:focus {
+  border-color: #81A969;
+  outline: none;
+}
+
+.registro-container form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #81A969;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registro-container form button:hover {
+  background-color: #314528;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background-color: #EFDDC9;
+  padding: 3rem 1rem;
+  color: #314528;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #314528;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #314528;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #81A969;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  font-size: 1.3rem;
+  color: #314528;
+  margin-right: 1rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #81A969;
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+}
+.footer-quote {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #314528;
+  opacity: 0.85;
+}
+/*=======ANIMACIONES DE SUAVIDAD========*/
+/*body {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+ /*=======MEDIA QUERIES========*/
+ @media (max-width: 768px) {
+  .hero-img-container img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img-container img {
+    height: 200px;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/paltaFavicon.png">
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html"><img src="img/home.png" alt="Inicio" class="home-icon" /></a>
+      <a href="index.html" class="logo-text">NutriGM</a>
+    </div>
+    <ul>
+    <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>
+      <li><a href="index.html#Nutricionistas">Nutricionistas</a></li>
+      <li><a href="calculadora.html">Calcular IMC</a></li>
+    </ul>
+  </nav>
+
+  <!-- FORMULARIO DE REGISTRO -->
+  <main class="registro-container">
+    <h2>Crear cuenta</h2>
+    <form id="registro-form">
+      <input type="text" name="nombre" placeholder="Nombre" required/>
+      <input type="text" name="apellido" placeholder="Apellido" required/>
+      <input type="text" placeholder="DNI" required />
+      <input type="email" name="correo" placeholder="Correo Electrónico" required/>
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <i class="fas fa-eye toggle-password" onclick="togglePassword.call(this)"></i>
+      </div>
+
+      <button type="submit">Registrarse</button>
+    </form>
+    <p class="registro-login">Ya tenés cuenta? <a href="iniciarSesion.html">Iniciá sesión</a>.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Menú</h4>
+        <ul>
+          <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>
+          <li><a href="calculadora.html">Calcular IMC</a></li>
+          <li><a href="index.html#Nutricionistas">Nutricionistas</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Seguinos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Perito Moreno 123, Ciudad</p>
+        <p><i class="fas fa-clock"></i> Horarios: Lun a Vie - 9 a 18</p>
+        <p><i class="fas fa-envelope"></i> contacto@nutrigm.com</p>
+      </div>
+    </div>
+    <div class="footer-quote">
+        <p>“Tu salud comienza por tu plato.”</p>
+      </div>
+  </footer>
+  <script src="js/VistaPassword.js"></script>
+</body>
+</html>
